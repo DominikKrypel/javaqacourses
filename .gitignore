@@ -1,3 +1,4 @@
 .idea/workspace.xml
 /sandbox/.gradle/
-.bin
+/sandbox/.bin/
+/sandbox/.build/

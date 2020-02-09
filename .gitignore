@@ -1,4 +1,4 @@
 .idea/workspace.xml
 /sandbox/.gradle/
-/sandbox/.bin/
-/sandbox/.lock/
+/sandbox/*.bin/
+/sandbox/*.lock/

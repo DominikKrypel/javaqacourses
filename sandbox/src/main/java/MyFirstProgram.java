@@ -7,13 +7,10 @@ public class MyFirstProgram {
         hello("user"); // Tak jak powyżej, tylko została przekazay łańcuch "user"
         hello("Dominik");// Tak jak powyżej, tylko została przekazay łańcuch "Dominik"
 
-        Square s = new Square();
-        s.l = 5;
+        Square s = new Square(5);
         System.out.println("Powierzchnia kwadratu o boku " + s.l + " = " + area(s));
 
-        Rectangle r = new Rectangle();
-        r.a = 5;
-        r.b = 6;
+        Rectangle r = new Rectangle(5, 5);
         System.out.println("Powierzchnia prostąkąta o bokach  " + r.a + " i " + r.b + " = " + area(r));
     }
 

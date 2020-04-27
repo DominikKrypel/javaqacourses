@@ -23,3 +23,5 @@ gradle-app.setting
 /sandbox/.gradle/5.1.1/javaCompile/taskHistory.bin
 /sandbox/.gradle/buildOutputCleanup/buildOutputCleanup.lock
 /sandbox/.gradle/
+/sandbox/.gradle/5.1.1/
+/sandbox/.gradle/buildOutputCleanup/

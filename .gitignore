@@ -25,3 +25,12 @@ gradle-app.setting
 /sandbox/.gradle/
 /sandbox/.gradle/5.1.1/
 /sandbox/.gradle/buildOutputCleanup/
+/sandbox/.gradle/5.1.1/executionHistory/executionHistory.bin
+/sandbox/.gradle/5.1.1/executionHistory/
+/sandbox/.gradle/5.1.1/executionHistory/executionHistory.bin
+/sandbox/.gradle/5.1.1/executionHistory/executionHistory.lock
+/sandbox/.gradle/5.1.1/fileHashes/fileHashes.bin
+/sandbox/.gradle/5.1.1/fileHashes/fileHashes.lock
+/sandbox/.gradle/5.1.1/javaCompile/javaCompile.lock
+/sandbox/.gradle/5.1.1/javaCompile/taskHistory.bin
+/sandbox/.gradle/buildOutputCleanup/buildOutputCleanup.lock

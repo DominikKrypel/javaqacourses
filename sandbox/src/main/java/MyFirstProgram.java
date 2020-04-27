@@ -18,3 +18,5 @@ public class MyFirstProgram {
         System.out.println("Hello, " + somebody + "!");
     }
 }
+
+public;

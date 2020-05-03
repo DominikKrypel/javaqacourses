@@ -1,7 +1,6 @@
 public class MyFirstProgram {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //Nazwy klas zaczynamy zawsze wielką literą, a wszystko pozostałe, np. pakiety, funckje z małej
         hello("world");// Najpierw uruchomiła się funkcja main, która zwróciła się du funkcji hello i przekazała łańcuch "world"
         hello("user"); // Tak jak powyżej, tylko została przekazay łańcuch "user"

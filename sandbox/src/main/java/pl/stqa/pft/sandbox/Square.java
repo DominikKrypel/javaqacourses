@@ -1,6 +1,6 @@
 package pl.stqa.pft.sandbox;
 
-public class Square {
+public class Square { //wewnątrz klasy Square niezbędnie trzeba opisać. Atrybuty, które posiada obiekt tego typu
 
     public double l;
 
@@ -12,8 +12,10 @@ public class Square {
 
     public double area() {                   //--to jest metoda
         return this.l * this.l;
-        //public static double area(Square s) {-- to jest funkcjareturn s.l * s.l;}
-        //wewnątrz klasy Square niezbędnie trzeba opisać. Atrybuty, które posiada obiekt tego typu
+
+        //public static double area(Square s)
+        // { return s.l * s.l;}                         jest funkcja
+
     }
 
 }

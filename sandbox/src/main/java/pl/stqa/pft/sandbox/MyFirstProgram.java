@@ -1,3 +1,5 @@
+package pl.stqa.pft.sandbox;
+
 public class MyFirstProgram { //Klasa to opis struktury tego samego typu obieków,
                               // które nazywają się przedstawicielami tej klasy albo egzemplarzami tej klasy
 

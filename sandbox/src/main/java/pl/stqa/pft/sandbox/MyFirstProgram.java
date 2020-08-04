@@ -8,8 +8,12 @@ public class MyFirstProgram { //Klasa to opis struktury tego samego typu obiekó
     // ... ale nie kazda Funckja jest Metoda
 
     public static void main(String[] args) {
-        //Nazwy klas zaczynamy zawsze wielką literą, a wszystko pozostałe, np. pakiety, funckje z małej
-        hello("world");// Najpierw uruchomiła się funkcja main, która zwróciła się du funkcji hello i przekazała łańcuch "world"
+        //Nazwy klas zaczynamy zawsze wielką literą, a wszystko pozostałe,...
+        // ...np. pakiety, funckje z małej
+
+        hello("world");// Najpierw uruchomiła się funkcja main,...
+        //...która zwróciła się du funkcji hello i przekazała łańcuch "world"
+
         hello("user"); // Tak jak powyżej, tylko została przekazay łańcuch "user"
         hello("tester");// Tak jak powyżej, tylko została przekazay łańcuch "Dominik"
 

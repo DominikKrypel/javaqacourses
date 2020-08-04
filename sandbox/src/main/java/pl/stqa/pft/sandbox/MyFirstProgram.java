@@ -12,10 +12,10 @@ public class MyFirstProgram { //Klasa to opis struktury tego samego typu obiekó
         // ...np. pakiety, funkcje z małej
 
         hello("world");// Najpierw uruchomiła się funkcja main,...
-        //...która zwróciła się du funkcji hello i przekazała łańcuch "world"
+        //...która zwróciła si ę du funkcji hello i przekazała łańcuch "world"
 
-        hello("user"); // Tak jak powyżej, tylko została przekazay łańcuch "user"
-        hello("tester");// Tak jak powyżej, tylko została przekazay łańcuch "Dominik"
+        hello("user"); // Tak jak powyżej, tylko została przekazay łańcuch 3ew"user"
+        hello("tester");// Tak jak powyżej, tylko została przekazay łańcuch "51 Dominik"
 
         Square s = new Square(5); // przenosimy wartosci parametrow, uzupelniane sa w konstruktorze
         System.out.println("Powierzchnia kwadratu o boku " + s.l + " = " + s.area());

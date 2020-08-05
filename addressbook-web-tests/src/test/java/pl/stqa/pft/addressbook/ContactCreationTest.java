@@ -31,10 +31,12 @@ public class ContactCreationTest {
     }
 
     @Test
-    public void testGroupCreation() throws Exception {
+    public void testContactCreation() throws Exception {
 
         gotoContactsPage();
-        fillContactForm(new ContactData( "test4", "test5", "test6", "test7", "test8", "test9", "Test10", "111111", "222222", "33333"));
+        fillContactForm(new ContactData( "test4", "test5", "test6",
+                                         "test7", "test8", "test9", "Test10",
+                                         "111111", "222222", "33333"));
         submitContactCreation();
         returnToContactsPage();
 
@@ -81,7 +83,6 @@ public class ContactCreationTest {
         wd.findElement(By.name("work")).click();
         wd.findElement(By.name("work")).clear();
         wd.findElement(By.name("work")).sendKeys(contactData.getWorkPhone());
-        wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
     }
 
     private void gotoContactsPage() {

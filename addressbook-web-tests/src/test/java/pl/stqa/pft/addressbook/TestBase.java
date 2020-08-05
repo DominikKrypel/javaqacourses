@@ -1,15 +1,16 @@
 package pl.stqa.pft.addressbook;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
     protected WebDriver wd;
+    public boolean acceptNextAlert;
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
@@ -123,6 +124,23 @@ public class TestBase {
     }
 
     protected void selectContacts() {
-        wd.findElement(By.id("8")).click();
+        wd.findElement(By.name("selected[]")).click();
+    }
+
+    protected String closeAlertAndGetItsText() {
+
+        try {
+            Alert alert = wd.switchTo().alert();
+            String alertText = alert.getText();
+            if (acceptNextAlert) {
+                alert.accept();
+            } else {
+                alert.dismiss();
+            }
+            return alertText;
+        } finally {
+            acceptNextAlert = true;
+        }
+
     }
 }

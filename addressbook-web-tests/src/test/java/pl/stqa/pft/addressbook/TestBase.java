@@ -133,14 +133,13 @@ public class TestBase {
             Alert alert = wd.switchTo().alert();
             String alertText = alert.getText();
             if (acceptNextAlert) {
-                alert.accept();
-            } else {
                 alert.dismiss();
+            } else {
+                alert.accept();
             }
             return alertText;
         } finally {
             acceptNextAlert = true;
         }
-
     }
 }

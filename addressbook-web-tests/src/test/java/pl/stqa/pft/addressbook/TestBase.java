@@ -127,7 +127,7 @@ public class TestBase {
         wd.findElement(By.name("selected[]")).click();
     }
 
-    protected String closeAlertAndGetItsText() {
+    protected String closeAlertAndGetItsText() {                // Ta metoda akceptuje alerty, do których nie ma dojścia przez HTML/F12
 
         try {
             Alert alert = wd.switchTo().alert();

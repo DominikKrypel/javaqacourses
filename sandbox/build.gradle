@@ -8,5 +8,5 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
+    testCompile group: 'org.testng', name: 'testng', version: '7.1.0'
 }

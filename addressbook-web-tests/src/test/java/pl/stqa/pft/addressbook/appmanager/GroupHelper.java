@@ -13,12 +13,10 @@ public class GroupHelper {
     }
 
     public void returnToGroupPage() {
-
         wd.findElement(By.linkText("group page")).click();
     }
 
     public void submitGroupCreation() {
-
         wd.findElement(By.name("submit")).click();
     }
 
@@ -39,12 +37,10 @@ public class GroupHelper {
     }
 
     public void deletedSelectedGroups() {
-
         wd.findElement(By.xpath("(//input[@name='delete'])[2]")).click();
     }
 
     public void selectGroup() {
-
         wd.findElement(By.name("selected[]")).click();
     }
 }

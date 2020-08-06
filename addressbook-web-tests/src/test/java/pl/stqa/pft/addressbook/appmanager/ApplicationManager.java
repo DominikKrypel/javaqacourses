@@ -2,52 +2,50 @@ package pl.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-    private final GroupHelper groupHelper = new GroupHelper();
+
+    WebDriver wd;
+
+    private ContactHelper contactHelper;
+    private NavgationHelper navgationHelper;
+    private GroupHelper groupHelper;
     public boolean acceptNextAlert;
 
     public void init() {
-        groupHelper.wd = new FirefoxDriver();
-        groupHelper.wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        groupHelper.wd.get("http://localhost/addressbook/index.php");
+        wd = new FirefoxDriver();
+        wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        wd.get("http://localhost/addressbook/index.php");
+        groupHelper = new GroupHelper(wd);
+        navgationHelper = new NavgationHelper(wd);
+        contactHelper = new ContactHelper(wd);
+
         login("admin", "secret");
     }
 
     private void login(String username, String password) {
-        groupHelper.wd.findElement(By.name("user")).click();
-        groupHelper.wd.findElement(By.name("user")).clear();
-        groupHelper.wd.findElement(By.name("user")).sendKeys(username);
-        groupHelper.wd.findElement(By.name("pass")).clear();
-        groupHelper.wd.findElement(By.name("pass")).sendKeys(password);
-        groupHelper.wd.findElement(By.xpath("//input[@value='Login']")).click();
+        wd.findElement(By.name("user")).click();
+        wd.findElement(By.name("user")).clear();
+        wd.findElement(By.name("user")).sendKeys(username);
+        wd.findElement(By.name("pass")).clear();
+        wd.findElement(By.name("pass")).sendKeys(password);
+        wd.findElement(By.xpath("//input[@value='Login']")).click();
     }
 
-    public void gotoGroupPage() {
-        groupHelper.wd.findElement(By.linkText("groups")).click();
-    }
-
-
-    public void gotoContactsCreationPage() {
-        groupHelper.wd.findElement(By.linkText("add new")).click();
-    }
 
     public void stop() {
-        groupHelper.wd.findElement(By.linkText("Logout")).click();
-        groupHelper.wd.quit();
-    }
-
-    public void goToContactsPage() {
-        groupHelper.wd.findElement(By.linkText("home")).click();
+        wd.findElement(By.linkText("Logout")).click();
+       wd.quit();
     }
 
     public String closeAlertAndGetItsText() {                // Ta metoda akceptuje alerty, do których nie ma dojścia przez HTML/F12
 
         try {
-            Alert alert = groupHelper.wd.switchTo().alert();
+            Alert alert = wd.switchTo().alert();
             String alertText = alert.getText();
             if (acceptNextAlert) {
                 alert.dismiss();
@@ -63,5 +61,13 @@ public class ApplicationManager {
     public GroupHelper getGroupHelper() {
 
         return groupHelper;
+    }
+
+    public NavgationHelper getNavgationHelper() {
+        return navgationHelper;
+    }
+
+    public ContactHelper getContactHelper() {
+        return contactHelper;
     }
 }

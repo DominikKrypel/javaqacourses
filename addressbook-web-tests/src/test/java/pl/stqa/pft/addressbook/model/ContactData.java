@@ -12,7 +12,9 @@ public class ContactData {
     private final String mobilePhone;
     private final String workPhone;
 
-    public ContactData(String firstname, String middlename, String lastname, String nickname, String title, String company, String address, String homePhone, String mobilePhone, String workPhone) {
+    public ContactData(String firstname, String middlename, String lastname, String nickname,
+                       String title, String company, String address, String homePhone,
+                       String mobilePhone, String workPhone) {
         this.firstname = firstname;
         this.middlename = middlename;
         this.lastname = lastname;

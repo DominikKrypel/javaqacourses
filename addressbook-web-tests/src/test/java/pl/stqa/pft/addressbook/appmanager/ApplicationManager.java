@@ -9,12 +9,12 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
 
     WebDriver wd;
+
     private AllertHelper allertHelper;
     private SessionHelper sessionHelper;
     private ContactHelper contactHelper;
     private NavgationHelper navgationHelper;
     private GroupHelper groupHelper;
-    public boolean acceptNextAlert;
 
     public void init() {
         wd = new FirefoxDriver();

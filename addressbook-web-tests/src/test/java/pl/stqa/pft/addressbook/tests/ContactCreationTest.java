@@ -15,6 +15,5 @@ public class ContactCreationTest extends TestBase {
                                          "111111", "222222", "33333"));
         app.getContactHelper().submitContactCreation();
         app.getNavgationHelper().goToContactsPage();
-
     }
 }

@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 
 public class SessionHelper extends HelperBase {
-    WebDriver wd;
 
     public SessionHelper(WebDriver wd){
         super(wd);

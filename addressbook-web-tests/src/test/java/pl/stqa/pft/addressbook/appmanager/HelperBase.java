@@ -17,7 +17,12 @@ public class HelperBase {
 
     protected void type(By locator, String text) { //pytanie dlaczego przesyłane są tu dwa parametry. Ta część jest do rozkminy.
         click(locator);
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+        if(text != null) {
+            String existingText = wd.findElement(locator).getAttribute("value");
+            if (!text.equals(existingText)) {
+                wd.findElement(locator).clear();
+                wd.findElement(locator).sendKeys(text);
+            }
+        }
     }
 }

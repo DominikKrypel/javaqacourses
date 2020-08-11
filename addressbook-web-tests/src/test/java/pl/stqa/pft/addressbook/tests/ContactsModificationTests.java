@@ -11,7 +11,7 @@ public class ContactsModificationTests extends TestBase {
         app.getContactHelper().initContactModification();
         app.getContactHelper().fillContactForm(new ContactData( "qqqq", "wwwww", "eeee",
                 "rrrr", "tttt", "yyyyy", "uuuu",
-                "iiiii", "222222", "33333"));
+                "iiiii", "222222", "33333", null), false);
         app.getContactHelper().submitContactModification();
         app.getNavgationHelper().goToContactsPage();
     }

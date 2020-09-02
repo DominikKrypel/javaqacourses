@@ -7,18 +7,18 @@ import pl.stqa.pft.addressbook.model.GroupData;
 public class ContactsModificationTests extends TestBase {
 
     @Test
-    public void testContactModification() throws Exception {
+    public void testContactModification() {
         app.getNavgationHelper().goToContactsPage();
         if (! app.getContactHelper().isThereAContact()){
             app.getContactHelper().createContact(new ContactData( "aaa", "aaa", "aaa",
                     "aaa", "aaa", "aaa", "aaa",
-                    "aaa", "aaa", "aaa", "group1"), true);
-            //app.getContactHelper().submitContactCreation();
+                    "aaa", "aaa", "aaa", "new_group"), true);
         }
+        app.getNavgationHelper().goToContactsPage();
         app.getContactHelper().initContactModification();
         app.getContactHelper().fillContactForm(new ContactData( "2222", "2222", "2222",
                 "2222", "2222", "2222", "2222",
-                "2222", "222222", "2222", "group1"), false);
+                "2222", "222222", "2222", "new_group"), false);
         app.getContactHelper().submitContactModification();
         app.getNavgationHelper().goToContactsPage();
     }

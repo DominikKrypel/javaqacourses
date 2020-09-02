@@ -11,9 +11,9 @@ public class ContactDeletionTests extends TestBase {
         if (! app.getContactHelper().isThereAContact()){
             app.getContactHelper().createContact(new ContactData( "aaa", "aaa", "aaa",
                     "aaa", "aaa", "aaa", "aaa",
-                    "aaa", "aaa", "aaa", "group1"), true);
-            //app.getContactHelper().submitContactCreation();
+                    "aaa", "aaa", "aaa", "new_group"), true);
         }
+        app.getNavgationHelper().goToContactsPage();
         app.getContactHelper().selectContacts();
         app.getContactHelper().deleteContacts();
         app.getAllertHelper().closeAlertAndGetItsText();

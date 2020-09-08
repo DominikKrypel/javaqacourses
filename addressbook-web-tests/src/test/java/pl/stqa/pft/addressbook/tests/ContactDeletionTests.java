@@ -16,7 +16,7 @@ public class ContactDeletionTests extends TestBase {
                     "aaa", "aaa", "aaa", "new_group"), true);
         }
         app.getNavgationHelper().goToContactsPage();
-        app.getContactHelper().selectContacts();
+        app.getContactHelper().selectContacts(before - 1);
         app.getContactHelper().deleteContacts();
         app.getAllertHelper().closeAlertAndGetItsText();
         app.getNavgationHelper().goToContactsPage();
